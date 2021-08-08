@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+@mixin titles {
+    
+    position: relative;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+}
+
+@mixin flexCenter ($direction){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+    white-space: pre-wrap;
+  
+  }

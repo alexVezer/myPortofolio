@@ -1,0 +1,12 @@
+:root {
+  --text-color:#46A7B8;
+  --sec-text-color: #263538;
+  --bg-color: #263538;
+  --bg-color2: #86BBC4;
+  --button-color: #153338;
+  --shadow-color: #37828F;
+  --typewriter-speed: 6s;
+  --typewriter-steps1: 13;
+  --typewriter-steps2: 23;
+  --typewriter-steps3: 25;
+}/*# sourceMappingURL=variables.css.map */
