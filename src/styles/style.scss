@@ -1,6 +1,7 @@
 @import "./style_Intro.scss";
 @import "./mixines.scss";
 
+
 body {
     margin:0;
     padding:0;
@@ -10,7 +11,7 @@ color:var(--sec-text-color);
 }
 
 h2 {
-    font-size: clamp(1rem, 1vw + 1rem, 2rem);
+    font-size: clamp(0.5rem, 1vw + 1rem, 2rem);
     @include titles();
     text-align: center;
 }
@@ -18,8 +19,8 @@ h2 {
 .about {
     @include flexCenter(row);
     background: var(--bg-color2);
-    padding: 2em 0;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    padding: 1em 0 4em 0;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     h2 {
         color: var(--sec-text-color);
     }
@@ -41,14 +42,26 @@ h2 {
 }
 
 .aa {
-    
+    margin: 1em auto;
     @include flexCenter(row);
+    // justify-content: space-around;    
     opacity: 0.7;
     text-align: center;
+    .arrows {
+        
+        &:disabled {
+            opacity: 0.3;
+        }
+
+    }
+    
+    i{
+        padding:0.3em;
+    }
 }
 
 .slide{
-
+    position: relative;   
     width: 30%;
     text-align: justify;
     padding-right: 1em;
@@ -56,8 +69,7 @@ h2 {
 }
 .slide-img  {
     max-width: 70%;
-    // max-height: 60vh;
-
+    
     img {
     max-width: 100%;
     float: right;
@@ -67,9 +79,11 @@ h2 {
     }
 }
 }
-.links{
+.links{  
     font-size: 1rem;
     padding: 1rem 0;
+    position: absolute;
+    bottom:0px;
     a{
         text-decoration: none;
         color: var(--text-color);
@@ -77,6 +91,7 @@ h2 {
             background: var(--button-color);
             box-shadow: var(--shadow-color) 3px 3px;
         }
+        
     }
     i{
         font-size: 3rem;
@@ -87,13 +102,13 @@ h2 {
     
 }
 .button {
-    // border: 0.5px solid lightgreen;
+    
     border-radius: 35px;
     display:inline-block;
-    padding: 1em;
+    padding: 1em 4em;
     box-shadow: lightsteelblue 2px 2px;
     text-align: center;
-    width: 60%;
+    // width: 50%;
     float: right;
     &:hover{
         background: var(--button-color);
@@ -104,10 +119,11 @@ h2 {
     background-color: transparent;
     font-size: 1em;
     color: rgba(2,2,2, 0.9);
+    padding : 1em auto;
 }
 
 .skill {
-    font-size: clamp(1rem, 15vw, 8rem);
+    font-size: clamp(3rem, 8vw, 12rem);
 }
   
 .skills {
@@ -117,7 +133,7 @@ h2 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
     background-color: var(--bg-color2);
   }
   
@@ -130,3 +146,5 @@ h2 {
  .contact {
     text-align: center;
  }
+
+ @import "./mediaq.scss";

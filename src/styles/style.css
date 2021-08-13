@@ -7,7 +7,7 @@
   --shadow-color: #37828F;
   --typewriter-speed: 6s;
   --typewriter-steps1: 13;
-  --typewriter-steps2: 23;
+  --typewriter-steps2: 30;
   --typewriter-steps3: 25;
 }
 
@@ -20,7 +20,7 @@
 }
 
 h1 {
-  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  font-size: clamp(1rem, 2vw + 1rem, 4rem);
   position: relative;
   font-weight: 500;
   font-family: "Courier New", Courier, monospace;
@@ -72,14 +72,13 @@ h1::after {
        blink 750ms steps(40) infinite; */
 }
 
-.down {
+.subtitle {
   color: var(--text-color);
-  font-size: 2rem;
-  font-weight: 100;
-  opacity: 0;
-  transform: translateY(1rem);
-  -webkit-animation: fadeInUp 2s ease calc(var(--typewriter-speed)*3 + 2s) forwards;
-          animation: fadeInUp 2s ease calc(var(--typewriter-speed)*3 + 2s) forwards;
+  font-size: clamp(0.5rem, 1vw + 1rem, 2rem);
+  font-weight: 400;
+  /*transform: translateY(1rem);
+     animation: fadeInUp 2s ease calc(var(--typewriter-speed)*3 + 2s) forwards;
+  */
 }
 
 @-webkit-keyframes typewriter {
@@ -124,7 +123,7 @@ h1::after {
   --shadow-color: #37828F;
   --typewriter-speed: 6s;
   --typewriter-steps1: 13;
-  --typewriter-steps2: 23;
+  --typewriter-steps2: 30;
   --typewriter-steps3: 25;
 }
 
@@ -136,7 +135,7 @@ body {
 }
 
 h2 {
-  font-size: clamp(1rem, 1vw + 1rem, 2rem);
+  font-size: clamp(0.5rem, 1vw + 1rem, 2rem);
   position: relative;
   font-weight: 500;
   font-family: "Courier New", Courier, monospace;
@@ -151,9 +150,9 @@ h2 {
   flex-direction: row;
   white-space: pre-wrap;
   background: var(--bg-color2);
-  padding: 2em 0;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding: 1em 0 4em 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
 .about h2 {
   color: var(--sec-text-color);
@@ -174,6 +173,7 @@ h2 {
 }
 
 .aa {
+  margin: 1em auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,8 +182,15 @@ h2 {
   opacity: 0.7;
   text-align: center;
 }
+.aa .arrows:disabled {
+  opacity: 0.3;
+}
+.aa i {
+  padding: 0.3em;
+}
 
 .slide {
+  position: relative;
   width: 30%;
   text-align: justify;
   padding-right: 1em;
@@ -205,6 +212,8 @@ h2 {
 .links {
   font-size: 1rem;
   padding: 1rem 0;
+  position: absolute;
+  bottom: 0px;
 }
 .links a {
   text-decoration: none;
@@ -221,10 +230,9 @@ h2 {
 .button {
   border-radius: 35px;
   display: inline-block;
-  padding: 1em;
+  padding: 1em 4em;
   box-shadow: lightsteelblue 2px 2px;
   text-align: center;
-  width: 60%;
   float: right;
 }
 .button:hover {
@@ -236,10 +244,11 @@ h2 {
   background-color: transparent;
   font-size: 1em;
   color: rgba(2, 2, 2, 0.9);
+  padding: 1em auto;
 }
 
 .skill {
-  font-size: clamp(1rem, 15vw, 8rem);
+  font-size: clamp(3rem, 8vw, 12rem);
 }
 
 .skills {
@@ -249,8 +258,8 @@ h2 {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
-          clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+          clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
   background-color: var(--bg-color2);
 }
 
@@ -262,4 +271,49 @@ h2 {
 
 .contact {
   text-align: center;
+}
+
+:root {
+  --text-color:#46A7B8;
+  --sec-text-color: #263538;
+  --bg-color: #263538;
+  --bg-color2: #86BBC4;
+  --button-color: #153338;
+  --shadow-color: #37828F;
+  --typewriter-speed: 6s;
+  --typewriter-steps1: 13;
+  --typewriter-steps2: 30;
+  --typewriter-steps3: 25;
+}
+
+@media screen and (max-width: 1055px) {
+  .skills {
+    padding: 6em 1em;
+  }
+}
+@media screen and (max-width: 950px) {
+  .full_slide {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  .slide-img {
+    max-width: 100%;
+  }
+  .slide-img img {
+    float: none;
+  }
+
+  .links {
+    position: static;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content {
+    max-width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -9,7 +9,7 @@
     }
 
     h1{
-        font-size: clamp(1rem, 3vw + 1rem, 4rem);
+        font-size: clamp(1rem, 2vw + 1rem, 4rem);
         position: relative;
         font-weight: 500;
         font-family: 'Courier New', Courier, monospace;
@@ -64,9 +64,9 @@
 
 .subtitle {
     color:var(--text-color);
-    font-size:2rem;
-    font-weight: 100;
-    opacity: 0;
+    font-size: clamp(0.5rem, 1vw + 1rem, 2rem);
+    font-weight: 400;
+    // opacity: 0;
     /*transform: translateY(1rem);
     animation: fadeInUp 2s ease calc(var(--typewriter-speed)*3 + 2s) forwards;
  */

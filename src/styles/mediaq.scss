@@ -1,0 +1,36 @@
+@import "./mixines.scss";
+
+@media screen and (max-width:1055px) {
+    .skills {
+        padding: 6em 1em;
+    }
+}  
+
+@media screen and (max-width: 950px) {
+    .full_slide {
+        
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    .slide {
+        width: 100%;
+
+    }
+    .slide-img {
+        max-width: 100%;
+
+        img {
+            
+            float: none;
+        }
+    }
+    .links {
+        position: static;
+    }
+}
+
+@media screen and (max-width:500px) {
+.content {
+    max-width: 90%;
+}
+}

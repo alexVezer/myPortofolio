@@ -10,6 +10,7 @@ class ProjectContainer extends Component {
             projects:data.projects,
             project: data.projects[0]
         }
+        
     }
 
     nextProject = () => {
@@ -18,6 +19,7 @@ class ProjectContainer extends Component {
 		project:this.state.projects[newIndex-1]
       })
     }
+
     prevProject = () => { 
         const newIndex = this.state.project.index-1;
         this.setState({
@@ -25,6 +27,9 @@ class ProjectContainer extends Component {
         })
     
     }
+
+    
+
     render() {
         const {projects, project} = this.state;
         const crtIndex = project.index;
@@ -33,20 +38,20 @@ class ProjectContainer extends Component {
                 
                     <Project project={project}/>
                         <div className="aa">
-                            <button className="arrows dim" onClick={ () =>this.prevProject()}
+                            <button className="arrows dim" onClick={ () => this.prevProject()}
                             disabled={project.index === 1} > 
-                            <i class="fas fa-chevron-left"></i>
+                            <i className="fas fa-chevron-left"></i>
                             </button>
                         {
                              projects.map(function(project, i) {
                                 if (i+1===crtIndex)
-                                    return  <i class="fas fa-circle"></i>
-                                 return <i class="far fa-circle"></i>
+                                    return  <i key = {project.id} className="fas fa-circle"></i>
+                                 return <i key = {project.id} class="far fa-circle"></i>
                             })
                         }  
                            <button className="arrows right" onClick={() =>this.nextProject()} 
                                 disabled= {project.index===data.projects.length} > 
-                                <i class="fas fa-chevron-right"></i> 
+                                <i className="fas fa-chevron-right"></i> 
                             </button>
                     </div> 
                 </section>
