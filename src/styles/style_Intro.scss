@@ -26,12 +26,12 @@
     }
     &:nth-of-type(1)::before {
         background: var(--bg-color);
-        animation: typewriter 4s  steps(var(--typewriter-steps1)) forwards;
+        animation: typewriter 3.5s  steps(var(--typewriter-steps1)) forwards;
     
     }
     &:nth-of-type(1)::after {
         animation: 
-            typewriter 4s steps(var(--typewriter-steps1)) forwards,
+            typewriter 3.5s steps(var(--typewriter-steps1)) forwards,
             blink 750ms steps(var(--typewriter-steps1)) 7;
     }
     &:nth-of-type(2):before {
@@ -41,7 +41,7 @@
     &:nth-of-type(2)::after {
         animation: 
         typewriter var(--typewriter-speed) steps(var(--typewriter-steps2)) calc(var(--typewriter-speed) - 1s) forwards,
-        blink 750ms steps(var(--typewriter-steps2)) calc(var(--typewriter-speed) + 1s) 8;
+        blink 750ms steps(var(--typewriter-steps2)) calc(var(--typewriter-speed) + 1s) 7;
     }
     &:nth-of-type(3)::before {
         background: var(--bg-color);
